@@ -21,11 +21,10 @@ A modern, web-based karaoke application with real-time collaboration features. O
 ## 📸 Screenshots
 
 ### Host View
-![Host View](./docs/host-view.png)
-*[Add host view screenshot here]*
+![Host View](./docs/host.png)
 
 ### Client View
-![Client View](./docs/client-view.png)
+![Client View](./docs/client.png)
 *[Add client view screenshot here]*
 
 ## 🎯 About
