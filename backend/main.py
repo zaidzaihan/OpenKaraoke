@@ -37,16 +37,24 @@ async def websocket_endpoint(websocket: WebSocket, room_id: str):
         while True:
             data = await websocket.receive_json()
             msg_type = data.get("type")
+            
             if msg_type == "control":
                 await room_manager.handle_control(websocket, room_id, data, username)
             elif msg_type == "queue_update":
                 await room_manager.enqueue_song(room_id, data["song"], username)
             elif msg_type == "song_ended":
-                await room_manager.handle_song_ended(room_id,username)
+                await room_manager.handle_song_ended(room_id, username)
+            elif msg_type == "comment":
+                # Handle comment messages
+                comment = data.get("comment", "")
+                if comment.strip():  # Only process non-empty comments
+                    await room_manager.handle_comment(room_id, comment, username)
             else:
                 await room_manager.broadcast(room_id, data)
+                
     except WebSocketDisconnect:
-        await room_manager.disconnect(websocket, room_id);   
+        # This automatically handles disconnections (browser close, network issues, etc.)
+        await room_manager.disconnect(websocket, room_id)   
         
 @app.get("/search")
 def searchYT(query: str):
