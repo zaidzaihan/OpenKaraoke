@@ -21,10 +21,12 @@ A modern, web-based karaoke application with real-time collaboration features. O
 ## 📸 Screenshots
 
 ### Host View
-![Host View](./docs/host.png)
+![OpenKaraoke Host Demo](./docs/host.png)
 
 ### Client View
-![Client View](./docs/client.png)
+<p align="center">
+  <img src="./docs/client.png" alt="OpenKaraoke Client Demo" width="250">
+</p>
 
 ## 🎯 About
 
@@ -223,4 +225,4 @@ For questions, issues, or suggestions, please open an issue on GitHub.
 
 ---
 
-**Made with ❤️ by the OpenKaraoke team**
+**Made by Zaid Zaihan @2025**
