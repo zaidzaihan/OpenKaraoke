@@ -25,7 +25,6 @@ A modern, web-based karaoke application with real-time collaboration features. O
 
 ### Client View
 ![Client View](./docs/client.png)
-*[Add client view screenshot here]*
 
 ## 🎯 About
 
